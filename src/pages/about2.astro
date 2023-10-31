@@ -1,0 +1,54 @@
+---
+import React from "react";
+import FechaCompleta from "../components/FechaCompleta";
+import MainPage from "../components/MainPage";
+import SubTitle from "../components/SubTitle";
+import AboutText from "../components/AboutText.astro";
+import { ViewTransitions } from "astro:transitions";
+---
+
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="https://use.typekit.net/kqd6vba.css">
+		<link rel="stylesheet" href="/css/styles.css"/>
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Zerendor.com</title>
+    <ViewTransitions />
+	</head>
+	<body transition:animate="none">
+		<div class="bg-gradient-to-b from-[#16160E] from-50% to-[#6C848D] h-screen p-8 video-cond-regular">
+      <FechaCompleta client:load />
+      <div transition:animate="slide">
+        <div class="mt-24">
+          <img
+            src="../public/logo/zereLogo.png"
+            alt="Zerendor Logo"
+            width={26}
+            height={19}
+          />
+          <div class="mt-4">
+            <p class="text-[#EDFFFF]">
+              + Food for thought:
+            </p>
+          </div>
+        </div>
+        <div class="text-[#EDFFFF] text-4xl rajdhani-regular flex flex-col space-y-4 mt-4">
+          <div class="uppercase">Let your eyes look directly forward</div>
+          <div class="uppercase">And your gaze be straight before you</div>
+          <div class="uppercase">Ponder the path of your feet</div>
+          <div class="uppercase">Then all your ways will be sure.</div>
+          <div class="video-cond-regular text-sm text-[#EDFFFF]">Proverbs 4:25-26</div>
+        </div>
+        
+        <div class="video-cond-regular text-sm text-[#EDFFFF] fixed bottom-6 left-0 right-0 flex justify-between">
+          <a href="/about" class="ml-6">- Return</a>
+        </div>
+      </div>
+      </div>
+      
+	</body>
+</html>

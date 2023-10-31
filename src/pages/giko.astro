@@ -1,0 +1,39 @@
+---
+import React from "react";
+import FechaCompleta from "../components/FechaCompleta";
+import MainPage from "../components/MainPage";
+import SubTitle from "../components/SubTitle";
+import WorkTitle from "../components/WorkTitle.astro";
+import WorkSubtitle from "../components/WorkSubtitle";
+import WorkBody from "../components/WorkBody";
+import { ViewTransitions } from "astro:transitions";
+---
+
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="https://use.typekit.net/kqd6vba.css">
+		<link rel="stylesheet" href="/css/styles.css"/>
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Zerendor.com</title>
+    <ViewTransitions />
+	</head>
+	<body transition:animate="none">
+		<div class="bg-gradient-to-b from-[#16160E] from-50% to-[#6C848D] h-screen p-8 video-cond-regular">
+      <FechaCompleta client:load />
+      <div transition:animate="slide">
+        <MainPage client:load />
+        <WorkTitle title="giko"/>
+        <WorkSubtitle subtitle="Brief" date="May 23'"/>
+        <WorkBody body="To bring comfort and authenticity to the home office desk. That is GIK(o)'s mission. Under the Japanese philosophy of simplicity, they craft keyboards to give a unique typing experience to developers and newcomers alike. I helped by creating the brand, landing page, design system, and online presence."/>
+        <div class="video-cond-regular text-sm text-[#EDFFFF] fixed bottom-6 left-0 right-0 flex justify-between">
+          <a href="/work" class="ml-6">- Return</a>
+          <a href="/gikodetail" class="mr-6">&gt; Slide to continue</a>
+        </div>
+      </div>  
+    </div>
+	</body>
+</html>

@@ -1,0 +1,64 @@
+---
+import React from "react";
+import FechaCompleta from "../components/FechaCompleta";
+import MainPage from "../components/MainPage";
+import SubTitle from "../components/SubTitle";
+import Equation from "../components/Equation";
+import { ViewTransitions } from "astro:transitions";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="https://use.typekit.net/kqd6vba.css">
+		<link rel="stylesheet" href="/css/styles.css"/>
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Zerendor.com</title>
+		<ViewTransitions />
+	</head>
+	<body transition:animate="none">
+		<div class="bg-gradient-to-b from-[#16160E] from-50% to-[#6C848D] h-screen p-8 video-cond-regular">
+			<FechaCompleta client:load />
+			<div transition:animate="slide">
+				<!-- Main -->
+				<div>
+					<MainPage client:load />
+					<div class="uppercase text-[#EDFFFF] text-4xl rajdhani-regular">
+						Zerendor.com
+					</div>
+					<SubTitle subtitle="Hosted by"/>
+					<div class="uppercase text-[#EDFFFF] text-4xl rajdhani-regular">
+						Bruno Gardini
+					</div>
+					<div class="uppercase text-[#EDFFFF] text-4xl rajdhani-regular">
+						UXUI Designer
+					</div>
+					<div class="uppercase text-[#EDFFFF] text-4xl rajdhani-regular">
+						Art Director
+					</div>
+					<SubTitle subtitle="Quick access"/>
+					<div class="flex flex-row space-x-4">
+						<a href="/work" class="uppercase text-[#EDFFFF] text-4xl rajdhani-regular underline underline-offset-4">Work</a>
+						<a href="mailto:bruno.gardini@outlook.com" class="uppercase text-[#EDFFFF] text-4xl rajdhani-regular underline underline-offset-4">E-mail</a>
+						<a href="/about" class="uppercase text-[#EDFFFF] text-4xl rajdhani-regular underline underline-offset-4">About</a>
+					</div>
+				</div>
+				
+				<!-- Modal -->
+				<div class="px-8 bg-[#EDFFFF] w-[326px] h-[130px] fixed bottom-0 left-1/2 -ml-[163px]">
+					<div class="underline underline-offset-4 flex flex-row justify-end text-[#717171]/80 card-text mt-3 text-xs cursor-pointer">Close me</div>
+					<div class="text-[#717171]/80 card-text text-xs mt-4">
+						<div class="mb-2">Behind the Philosophy of this website, a 3 minute read:</div>
+						<Equation type="Design" attribute="Solution"/>
+						<Equation type="Passion" attribute="Keystone"/>
+						<Equation type="Discipline" attribute="Success"/>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+	</body>
+</html>
