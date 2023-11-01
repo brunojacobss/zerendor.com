@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
 function MainPage() {
-  const [underscore, setUnderscore] = useState("_");
+  const [underscore, setUnderscore] = useState('_');
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setUnderscore((prev) => (prev === "_" ? " " : "_"));
+      setUnderscore((prev) => (prev === '_' ? ' ' : '_'));
     }, 500);
 
     return () => {
@@ -16,7 +16,7 @@ function MainPage() {
   return (
     <div className="mt-24">
       <img
-        src="../public/logo/zereLogo.png"
+        src="/logo/zereLogo.png"
         alt="Zerendor Logo"
         width={26}
         height={19}

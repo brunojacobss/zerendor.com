@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Arial Narrow";
-  src: url("../public/fonts/Arial\ Narrow.ttf");
+  src: url("/fonts/Arial\ Narrow.ttf");
 }
 
 @font-face {
   font-family: "Arial Narrow Regular";
-  src: url("../public/fonts/ARIALN.TTF");
+  src: url("/fonts/ARIALN.TTF");
 }
 
 .card-text {
@@ -92,7 +92,7 @@
   height: 100vh;
   width: 100vw;
   z-index: -1;
-  background-image: url("../public/36pics/0RECAP6.png");
+  background-image: url("/36pics/0RECAP6.png");
   background-size: cover;
   background-position: center;
   filter: blur(10px);
