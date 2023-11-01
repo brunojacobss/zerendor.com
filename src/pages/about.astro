@@ -6,7 +6,7 @@ import NavFooter from '@components/NavFooter.astro';
 ---
 
 <ZerendorLayout title="About - Zerendor" showDate>
-  <div transition:animate="slide">
+  <div>
     <ZerendorWelcome client:load to="about" />
     <AboutText />
     <NavFooter returnPath="/" nextPath="/about2" />
