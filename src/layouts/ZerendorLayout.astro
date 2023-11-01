@@ -14,7 +14,7 @@ const { title, showDate } = Astro.props;
     <CommonHead title={title} />
   </head>
   <body
-    class="bg-gradient-to-b from-[#16160E] from-50% to-[#6C848D] h-screen p-8 video-cond-regular"
+    class="bg-gradient-to-b from-[#16160E] from-50% to-[#6C848D] h-screen overflow-auto p-8 video-cond-regular"
   >
     <motion.div client:load animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
       {showDate && <FechaCompleta client:load />}
