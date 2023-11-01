@@ -8,6 +8,23 @@
   src: url("/fonts/ARIALN.TTF");
 }
 
+@font-face {
+  font-family: 'VideoCondLight';
+  src: url('/fonts/VideoCond-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'VideoCondRegular';
+  src: url('/fonts/VideoCond-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'RajdhaniRegular';
+  src: url('/fonts/Rajdhani-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'RajdhaniMedium';
+  src: url('/fonts/Rajdhani-Medium.ttf') format('truetype');
+}
+
 .card-text {
   font-family: "Arial Narrow Regular", sans-serif;
 }
@@ -17,29 +34,16 @@
 }
 
 .video-cond-light {
-  font-family: "video-cond", serif;
-  font-weight: 300;
-  font-style: normal;
+  font-family: "VideoCondLight", serif;
 }
 .video-cond-regular {
-  font-family: "video-cond", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.video-cond-medium {
-  font-family: "video-cond", serif;
-  font-weight: 500;
-  font-style: normal;
+  font-family: "VideoCondRegular", serif;
 }
 .rajdhani-regular {
-  font-family: "rajdhani", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family: "RajdhaniRegular", sans-serif;
 }
 .rajdhani-medium {
-  font-family: "rajdhani", sans-serif;
-  font-weight: 500;
-  font-style: normal;
+  font-family: "RajdhaniMedium", sans-serif;
 }
 .arial-narrow {
   font-family: "Arial-Narrow", sans-serif;
