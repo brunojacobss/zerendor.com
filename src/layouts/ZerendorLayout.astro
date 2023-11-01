@@ -1,0 +1,23 @@
+---
+import CommonHead from '../components/CommonHead.astro';
+import FechaCompleta from '../components/FechaCompleta';
+interface Props {
+  title: string;
+  showDate?: boolean;
+}
+const { title, showDate } = Astro.props;
+---
+
+<html lang="eng">
+  <head>
+    <CommonHead title={title} />
+  </head>
+  <body>
+    <div
+      class="bg-gradient-to-b from-[#16160E] from-50% to-[#6C848D] h-screen p-8 video-cond-regular"
+    >
+      {showDate && <FechaCompleta client:load />}
+      <slot />
+    </div>
+  </body>
+</html>

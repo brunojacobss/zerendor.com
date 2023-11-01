@@ -1,0 +1,22 @@
+---
+import ZerendorLayout from '@layouts/ZerendorLayout.astro';
+import NowWatching from '@components/NowWatching';
+import SlideTitle from '@components/SlideTitle';
+import WorkTitle from '@components/WorkTitle.astro';
+import NavFooter from '@components/NavFooter.astro';
+---
+
+<ZerendorLayout title="36days0 x Zerendor">
+  <div transition:animate="slide">
+    <NowWatching worktitle="36days" />
+  </div>
+  <div class="mt-24" transition:animate="none">
+    <img src="/logo/zereLogo.png" alt="Zerendor Logo" width={26} height={19} />
+  </div>
+  <div transition:animate="slide">
+    <SlideTitle slidetitle="Neon spectacle" />
+    <WorkTitle title="Zero" />
+    <img src="/36pics/0RECAP6.png" alt="Foto 0" class="mt-4 rounded-img" />
+  </div>
+  <NavFooter returnPath="/36days" nextPath="/36days/36days1" />
+</ZerendorLayout>

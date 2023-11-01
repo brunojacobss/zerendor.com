@@ -1,38 +1,14 @@
 ---
-import React from "react";
-import FechaCompleta from "../components/FechaCompleta";
-import MainPage from "../components/MainPage";
-import SubTitle from "../components/SubTitle";
-import AboutText from "../components/AboutText.astro";
-import { ViewTransitions } from "astro:transitions";
+import AboutText from '@components/AboutText.astro';
+import ZerendorLayout from '@layouts/ZerendorLayout.astro';
+import ZerendorWelcome from '@components/Welcome';
+import NavFooter from '@components/NavFooter.astro';
 ---
 
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="stylesheet" href="https://use.typekit.net/kqd6vba.css">
-		<link rel="stylesheet" href="/css/styles.css"/>
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Zerendor.com</title>
-    <ViewTransitions />
-	</head>
-	<body transition:animate="none">
-		<div class="bg-gradient-to-b from-[#16160E] from-50% to-[#6C848D] h-screen p-8 video-cond-regular">
-      <FechaCompleta client:load />
-      <div transition:animate="slide">
-        <MainPage client:load />
-        <div class="uppercase text-[#EDFFFF] text-4xl rajdhani-regular">
-          About
-        </div>
-        <AboutText />
-        <div class="video-cond-regular text-sm text-[#EDFFFF] fixed bottom-6 left-0 right-0 flex justify-between">
-          <a href="/" class="ml-6">- Return</a>
-          <a href="/about2" class="mr-6">&gt; Slide to continue</a>
-        </div>
-      </div>
-    </div>
-	</body>
-</html>
+<ZerendorLayout title="About - Zerendor" showDate>
+  <div transition:animate="slide">
+    <ZerendorWelcome client:load to="about" />
+    <AboutText />
+    <NavFooter returnPath="/" nextPath="/about2" />
+  </div>
+</ZerendorLayout>

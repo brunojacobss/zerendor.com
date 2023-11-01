@@ -1,0 +1,20 @@
+---
+interface Props {
+  returnPath: string;
+  nextPath?: string;
+}
+const { returnPath, nextPath } = Astro.props;
+---
+
+<div
+  class="video-cond-regular text-sm text-[#EDFFFF] fixed bottom-6 left-0 right-0 flex justify-between"
+>
+  <a href={returnPath} class="ml-6">- Return</a>
+  {
+    nextPath && (
+      <a href={nextPath} class="mr-6">
+        &gt; Slide to continue
+      </a>
+    )
+  }
+</div>

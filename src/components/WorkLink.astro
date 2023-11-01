@@ -1,0 +1,13 @@
+---
+interface Props {
+  title: string;
+  href: string;
+}
+const { title, href } = Astro.props;
+---
+
+<a
+  href={href}
+  class="uppercase text-[#EDFFFF] text-4xl rajdhani-regular underline underline-offset-4"
+  >{title}</a
+>

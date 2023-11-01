@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
-function MainPage() {
+type Props = {
+  to: string;
+};
+
+function ZerendorWelcome({ to }: Props) {
   const [underscore, setUnderscore] = useState('_');
 
   useEffect(() => {
@@ -25,9 +29,13 @@ function MainPage() {
         <p className="text-[#EDFFFF]">
           + Welcome to<span>{underscore}</span>
         </p>
+
+        <span className="uppercase text-[#EDFFFF] text-4xl rajdhani-regular">
+          {to}
+        </span>
       </div>
     </div>
   );
 }
 
-export default MainPage;
+export default ZerendorWelcome;
