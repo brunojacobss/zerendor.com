@@ -1,8 +1,10 @@
 ---
-import React from "react";
+interface Props {
+  title: string;
+}
 const { title } = Astro.props;
 ---
 
-<div class="uppercase text-[#EDFFFF] text-4xl rajdhani-regular">
-  { title }
-</div>
+<span class="uppercase text-[#EDFFFF] text-4xl rajdhani-regular">
+  {title}
+</span>

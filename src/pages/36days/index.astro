@@ -1,0 +1,18 @@
+---
+import WorkSubtitle from '@components/WorkSubtitle';
+import WorkBody from '@components/WorkBody';
+import ZerendorWelcome from '@components/Welcome';
+import ZerendorLayout from '@layouts/ZerendorLayout.astro';
+import NavFooter from '@components/NavFooter.astro';
+---
+
+<ZerendorLayout title="Zerendor x 36days" showDate>
+  <div transition:animate="slide">
+    <ZerendorWelcome to="36days" />
+    <WorkSubtitle subtitle="Brief" date="Mar to May 23'" />
+    <WorkBody
+      body="To challenge ourselves and step out of our comfort zones, 36DAYS tasks us with developing an entire set of characters from AtoZ and 0to9 from scratch. I drew, vectorized and provided creative direction to SPAW's proposal based on a reinterpretation of a seven segment display."
+    />
+    <NavFooter returnPath="/work" nextPath="/36days/36days0" />
+  </div>
+</ZerendorLayout>

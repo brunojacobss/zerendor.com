@@ -1,69 +1,35 @@
 ---
-import React from 'react';
-import FechaCompleta from '../components/FechaCompleta';
-import MainPage from '../components/MainPage';
-import SubTitle from '../components/SubTitle';
-import Equation from '../components/Equation';
-import '../styles/global.css';
-import PhilosophyCard from '../components/PhilosophyCard';
-import { ViewTransitions } from 'astro:transitions';
+import SubTitle from '@components/SubTitle';
+import PhilosophyCard from '@components/PhilosophyCard';
+import ZerendorLayout from '@layouts/ZerendorLayout.astro';
+import ZerendorWelcome from '@components/Welcome';
+import WorkLink from '@components/WorkLink.astro';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="https://use.typekit.net/kqd6vba.css" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Zerendor.com</title>
-    <ViewTransitions />
-  </head>
-  <body transition:animate="none">
-    <div
-      class="bg-gradient-to-b from-[#16160E] from-50% to-[#6C848D] h-screen p-8 video-cond-regular"
-    >
-      <FechaCompleta client:load />
-      <div transition:animate="slide">
-        <!-- Main -->
-        <div>
-          <MainPage client:load />
-          <div class="uppercase text-[#EDFFFF] text-4xl rajdhani-regular">
-            Zerendor.com
-          </div>
-          <SubTitle subtitle="Hosted by" />
-          <div class="uppercase text-[#EDFFFF] text-4xl rajdhani-regular">
-            Bruno Gardini
-          </div>
-          <div class="uppercase text-[#EDFFFF] text-4xl rajdhani-regular">
-            UXUI Designer
-          </div>
-          <div class="uppercase text-[#EDFFFF] text-4xl rajdhani-regular">
-            Art Director
-          </div>
-          <SubTitle subtitle="Quick access" />
-          <div class="flex flex-row space-x-4">
-            <a
-              href="/work"
-              class="uppercase text-[#EDFFFF] text-4xl rajdhani-regular underline underline-offset-4"
-              >Work</a
-            >
-            <a
-              href="mailto:bruno.gardini@outlook.com"
-              class="uppercase text-[#EDFFFF] text-4xl rajdhani-regular underline underline-offset-4"
-              >E-mail</a
-            >
-            <a
-              href="/about"
-              class="uppercase text-[#EDFFFF] text-4xl rajdhani-regular underline underline-offset-4"
-              >About</a
-            >
-          </div>
-        </div>
-
-        <!-- Modal -->
-        <PhilosophyCard client:load />
+<ZerendorLayout title="Zerendor.com" showDate>
+  <div transition:animate="slide">
+    <!-- Main -->
+    <div>
+      <ZerendorWelcome to="Zerendor.com" client:load />
+      <SubTitle subtitle="Hosted by" />
+      <div class="uppercase text-[#EDFFFF] text-4xl rajdhani-regular">
+        Bruno Gardini
+      </div>
+      <div class="uppercase text-[#EDFFFF] text-4xl rajdhani-regular">
+        UXUI Designer
+      </div>
+      <div class="uppercase text-[#EDFFFF] text-4xl rajdhani-regular">
+        Art Director
+      </div>
+      <SubTitle subtitle="Quick access" />
+      <div class="flex flex-row space-x-4">
+        <WorkLink title="work" href="/work" />
+        <WorkLink title="e-mail" href="mailto:bruno.gardini@outlook.com" />
+        <WorkLink title="about" href="/about" />
       </div>
     </div>
-  </body>
-</html>
+
+    <!-- Modal -->
+    <PhilosophyCard client:load />
+  </div>
+</ZerendorLayout>
