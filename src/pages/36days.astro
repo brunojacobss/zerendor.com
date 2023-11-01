@@ -1,39 +1,44 @@
 ---
-import React from "react";
-import FechaCompleta from "../components/FechaCompleta";
-import MainPage from "../components/MainPage";
-import SubTitle from "../components/SubTitle";
-import WorkTitle from "../components/WorkTitle.astro";
-import WorkSubtitle from "../components/WorkSubtitle";
-import WorkBody from "../components/WorkBody";
-import { ViewTransitions } from "astro:transitions";
+import React from 'react';
+import FechaCompleta from '../components/FechaCompleta';
+import MainPage from '../components/MainPage';
+import SubTitle from '../components/SubTitle';
+import WorkTitle from '../components/WorkTitle.astro';
+import WorkSubtitle from '../components/WorkSubtitle';
+import WorkBody from '../components/WorkBody';
+import { ViewTransitions } from 'astro:transitions';
 ---
 
-
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="stylesheet" href="https://use.typekit.net/kqd6vba.css">
-		<link rel="stylesheet" href="/css/styles.css"/>
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Zerendor.com</title>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="https://use.typekit.net/kqd6vba.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Zerendor.com</title>
     <ViewTransitions />
-	</head>
-	<body transition:animate="none">
-		<div class="bg-gradient-to-b from-[#16160E] from-50% to-[#6C848D] h-screen p-8 video-cond-regular">
+  </head>
+  <body transition:animate="none">
+    <div
+      class="bg-gradient-to-b from-[#16160E] from-50% to-[#6C848D] h-screen p-8 video-cond-regular"
+    >
       <FechaCompleta client:load />
       <div transition:animate="slide">
         <MainPage client:load />
-        <WorkTitle title="36days"/>
-        <WorkSubtitle subtitle="Brief" date="Mar to May 23'"/>
-        <WorkBody body="To challenge ourselves and step out of our comfort zones, 36DAYS tasks us with developing an entire set of characters from AtoZ and 0to9 from scratch. I drew, vectorized and provided creative direction to SPAW's proposal based on a reinterpretation of a seven segment display."/>
-        <div class="video-cond-regular text-sm text-[#EDFFFF] fixed bottom-6 left-0 right-0 flex justify-between">
+        <WorkTitle title="36days" />
+        <WorkSubtitle subtitle="Brief" date="Mar to May 23'" />
+        <WorkBody
+          body="To challenge ourselves and step out of our comfort zones, 36DAYS tasks us with developing an entire set of characters from AtoZ and 0to9 from scratch. I drew, vectorized and provided creative direction to SPAW's proposal based on a reinterpretation of a seven segment display."
+        />
+        <div
+          class="video-cond-regular text-sm text-[#EDFFFF] fixed bottom-6 left-0 right-0 flex justify-between"
+        >
           <a href="/work" class="ml-6">- Return</a>
           <a href="/36days0" class="mr-6">&gt; Slide to continue</a>
         </div>
-      </div>  
+      </div>
     </div>
-	</body>
+  </body>
 </html>
