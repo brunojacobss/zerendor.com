@@ -8,7 +8,7 @@ export default function PhilosophyCard(): JSX.Element {
     <motion.div
       layout
       style={{
-        backgroundColor: open ? '#fff' : '#EDFFFF',
+        backgroundColor: '#EDFFFF',
         height: open ? '100%' : 130,
         width: open ? '100%' : 326,
         position: 'fixed',
