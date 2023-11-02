@@ -53,7 +53,7 @@ export default function PhilosophyCard(): JSX.Element {
             <br /> It's your turn to homerun your brand, startup, or company.
             Rates start at 999 USD for individuals. Parity pricing available.
             <br />
-            <br /> Thanks for visiting zerendor.com Get your ‘I VISITED
+            <br /> Thanks for visiting zerendor.com Waitlist your ‘I VISITED
             ZERENDOR.COM’ poster{' '}
             <span className="underline cursor-pointer">here</span>
           </p>
